@@ -14,7 +14,7 @@ sudo /usr/sbin/installer -verbose -pkg "/Volumes/Command Line Tools (Mountain Li
 
 # Cleanup
 # find where mounted
-mountPoint=$(mount | grep Command | egrep -o ^[^[:space:]]+ )
+mountPoint=$(mount | grep "Command Line Tools" | egrep -o ^[^[:space:]]+ )
 
 # unmount
 hdiutil detach $mountPoint -force
