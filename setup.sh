@@ -47,3 +47,9 @@ source install_pear.sh
 echo "Install dotfiles by maxbeatty? (y/n)"
 read REPLY
 [ "$REPLY" == "y" ] && cd ~/Sites && hub clone maxbeatty/dotfiles && cd dotfiles && ./sync.sh
+
+# Install sprintly (optional)
+echo "Install sprintly-github by nextbigsoundinc? (y/n)"
+read REPLY
+[ "$REPLY" == "y" ] && source install_sprintly.sh
+
