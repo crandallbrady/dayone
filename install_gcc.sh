@@ -2,8 +2,8 @@
 cd /tmp
 
 # Download Xcode Command Line Tools
-# TODO: host internally, not behind AAPL wall or on GH where blog is too big
-# curl -O xcode-clt.dmg https://isocket.lan/xcode452cltools10_86938211a.dmg
+# setup DNS in Network preferences first!
+curl -O xcode-clt.dmg http://idev/xcode452cltools10_86938211a.dmg
 
 # Mount image
 hdid xcode-clt.dmg
