@@ -1,6 +1,5 @@
 #!/bin/bash
 # Install PEAR
-cd /tmp
 
 # Download
 curl -O http://pear.php.net/go-pear.phar
@@ -12,5 +11,8 @@ echo "Use all defaults (read: keep pressing enter)"
 
 # Install 
 php -d detect_unicode=0 go-pear.phar
+
+# cleanup
+rm go-pear.phar
 
 # Add to PATH w/ dotfiles/.extra
