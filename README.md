@@ -7,7 +7,9 @@ Your first day at isocket shouldn't be wasted setting up your dev environment. W
 
 Assuming you've just been handed a new MacBook Pro, launch Terminal and run this:
 
-> mkdir dayone && curl -L https://github.com/isocket/dayone/tarball/master | tar xz --strip 1 -C dayone && cd dayone && ./setup.sh
+```bash
+mkdir dayone && curl -L https://github.com/isocket/dayone/tarball/master | tar xz --strip 1 -C dayone && cd dayone && ./setup.sh
+```
 
 There will be some simple prompts along the way.
 
