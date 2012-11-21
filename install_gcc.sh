@@ -1,8 +1,10 @@
 #!/bin/bash
 cd /tmp
 
+# Set internal DNS server
+source setup_internal_dns.sh
+
 # Download Xcode Command Line Tools
-# setup DNS in Network preferences first!
 curl -O xcode-clt.dmg http://idev/xcode452cltools10_86938211a.dmg
 
 # Mount image
