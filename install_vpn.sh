@@ -18,3 +18,7 @@ hdiutil detach $mountPoint -force
 # remove
 rm tunnelblick.dmg
 
+# TODO
+# scp client config from idev
+# setup for tunnelblick
+
