@@ -38,6 +38,16 @@ source install_rubygems.sh
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
 
+# replace LLVM gcc for rvm
+brew tap homebrew/dupes
+brew install autoconf automake apple-gcc42
+rvm pkg install openssl
+
+# TODO: detect if could not link apple-gcc42 and run...
+# sudo chown root:admin /usr/local/include/
+# sudo chmod g+w /usr/local/include
+# brew link apple-gcc42
+
 # Install Git, bash completion, and hub (a GitHub tool)
 brew install git bash-completion hub
 
