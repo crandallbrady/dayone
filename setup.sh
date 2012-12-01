@@ -1,14 +1,6 @@
 #!/bin/bash
 # This script installs everything you need to get started setting up a new machine
 
-echo "We will be sudo-ing a lot so let's get that password out of the way..."
-# from https://github.com/paulirish/dotfiles/blob/master/.osx#L5
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Get basic info from user like name and email
 source user_prompt.sh
 
