@@ -3,7 +3,7 @@
 
 # name
 if [ -z "$user_name" ]; then
-    echo "What is your full name?"
+    echo "What is your full name? (First Last)"
     read user_name
 fi
 
