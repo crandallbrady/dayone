@@ -9,6 +9,10 @@ hdid tunnelblick.dmg
 open /Volumes/Tunnelblick/Tunnelblick.app
 # will prompt for password and say it installed...
 
+# pausing script
+echo "Are you finished installing Tunnelblick? (y/n)"
+read yes
+
 # find where mounted
 mountPoint=$(mount | grep Tunnelblick | egrep -o ^[^[:space:]]+ )
 
@@ -18,6 +22,6 @@ hdiutil detach $mountPoint -force
 # remove
 rm tunnelblick.dmg
 
-# TODO: user? passwd?
-# scp user@idev:openvpn-config ~/Library/Application\ Support/Tunnelblick/Configurations/isocket.tblk/Contents/Resources/isocket
+# copy configuration files in place
+scp idev:openvpn-config/* ~/Library/Application\ Support/Tunnelblick/Configurations/
 
