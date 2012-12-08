@@ -31,7 +31,7 @@ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
 
 # Install Git, bash completion, and hub (a GitHub tool)
-brew install git bash-completion hub
+brew install git bash-completion hub thrift
 
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
