@@ -1,6 +1,6 @@
 #!/bin/bash
 # Setup internal DNS so you can download Xcode from internal server
-dns="192.168.1.200 8.8.8.8 8.8.4.4"
+dns="192.168.86.200 8.8.8.8 8.8.4.4"
 
 echo "Are you connected via WiFi? (y/n)"
 read wifi
