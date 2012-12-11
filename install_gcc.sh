@@ -23,3 +23,7 @@ hdiutil detach $mountPoint -force
 
 # remove
 rm xcode-clt.dmg
+
+# system looks for gcc at /usr/bin
+echo "We need to link the newly installed gcc-4.2 into your system. Please authenticate for sudo..."
+sudo ln -s /usr/local/bin/gcc-4.2 /usr/bin/gcc-4.2
