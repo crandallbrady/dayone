@@ -12,5 +12,5 @@ ping -c 1 idev
 # ping error goes to sterr with no stout so testing for that
 if [ $? -ne 0 ]; then
   echo "DNS did take :( better go talk to someone before continuing"
-  return;
+  return 1;
 fi
