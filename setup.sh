@@ -29,7 +29,6 @@ brew install git bash-completion hub thrift
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
 brew install autoconf automake apple-gcc42
-rvm pkg install openssl
 
 # TODO: detect if could not link apple-gcc42 and run...
 # sudo chown root:admin /usr/local/include/
@@ -39,6 +38,7 @@ rvm pkg install openssl
 # Install RVM
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
+rvm pkg install openssl
 
 # Install RubyGems
 source install_rubygems.sh
