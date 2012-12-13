@@ -39,6 +39,8 @@ brew install autoconf automake apple-gcc42
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
 rvm pkg install openssl
+# OS X workaround
+rvm reinstall all --force
 
 # Install RubyGems
 source install_rubygems.sh
