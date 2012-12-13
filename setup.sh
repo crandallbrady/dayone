@@ -19,13 +19,6 @@ else
     echo "gcc installed"
 fi
 
-# Install RVM
-curl -L https://get.rvm.io | bash -s stable --ruby
-source ~/.rvm/scripts/rvm
-
-# Install RubyGems
-source install_rubygems.sh
-
 # Install Homebrew
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
@@ -43,6 +36,13 @@ rvm pkg install openssl
 # sudo chmod g+w /usr/local/include
 # brew link apple-gcc42
 
+# Install RVM
+curl -L https://get.rvm.io | bash -s stable --ruby
+source ~/.rvm/scripts/rvm
+
+# Install RubyGems
+source install_rubygems.sh
+
 # Set global configs for git
 source git_config.sh
 
@@ -51,9 +51,6 @@ sudo easy_install Pygments
 
 # Install PEAR
 source install_pear.sh
-
-#Install Chef
-#sudo gem install chef --no-ri --no-rdoc
 
 # Install dotfiles (optional)
 echo "Install dotfiles by maxbeatty? (y/n)"
@@ -64,4 +61,3 @@ read REPLY
 echo "Install sprintly-github by nextbigsoundinc? (y/n)"
 read REPLY
 [ "$REPLY" == "y" ] && source install_sprintly.sh
-
