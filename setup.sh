@@ -24,7 +24,7 @@ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
 
 # Install Git, bash completion, and hub (a GitHub tool)
-brew install git bash-completion hub thrift
+brew install git bash-completion hub
 
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
@@ -53,6 +53,9 @@ sudo easy_install Pygments
 
 # Install PEAR
 source install_pear.sh
+
+# Install isocket's custom version of thrift
+source install_isocket-thrift.sh
 
 # Install dotfiles (optional)
 echo "Install dotfiles by maxbeatty? (y/n)"
