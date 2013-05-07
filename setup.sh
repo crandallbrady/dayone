@@ -43,6 +43,7 @@ brew install autoconf automake apple-gcc42 libyaml
 # Install RVM
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
+# set to auto-install dependencies, will use Homebrew
 rvm autolibs 3
 rvm pkg install openssl
 # OS X workaround
@@ -59,14 +60,6 @@ sudo easy_install Pygments
 
 # Install PEAR
 source install_pear.sh
-
-# Install elasticsearch & RabbitMQ
-brew install elasticsearch rabbitmq
-
-# add entry to prevent local jservices from connecting to the "real" master node
-sudo sh -c 'echo "127.0.0.1   elasticsearch01" >> /etc/hosts'
-# same for rabbitmq
-sudo sh -c 'echo "127.0.0.1   rabbitmq01" >> /etc/hosts'
 
 # Install isocket's custom version of thrift
 source install_isocket-thrift.sh
