@@ -33,7 +33,7 @@ brew install git bash-completion hub
 
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
-brew install autoconf automake apple-gcc42
+brew install autoconf automake apple-gcc42 libyaml
 
 # TODO: detect if could not link apple-gcc42 and run...
 # sudo chown root:admin /usr/local/include/
@@ -43,6 +43,7 @@ brew install autoconf automake apple-gcc42
 # Install RVM
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
+rvm autolibs 3
 rvm pkg install openssl
 # OS X workaround
 rvm reinstall all --force
