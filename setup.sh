@@ -21,6 +21,11 @@ fi
 
 # Install Homebrew
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+
+# set Homebrew bin dirs to come before the system's
+sudo sh -c 'echo "/usr/local/bin\n/usr/local/sbin\n$(cat /etc/paths)" > /etc/paths'
+
+# make sure all is good in the land of Homebrew
 brew doctor
 
 # Install Git, bash completion, and hub (a GitHub tool)
@@ -53,6 +58,14 @@ sudo easy_install Pygments
 
 # Install PEAR
 source install_pear.sh
+
+# Install elasticsearch & RabbitMQ
+brew install elasticsearch rabbitmq
+
+# add entry to prevent local jservices from connecting to the "real" master node
+sudo sh -c 'echo "127.0.0.1   elasticsearch01" >> /etc/hosts'
+# same for rabbitmq
+sudo sh -c 'echo "127.0.0.1   rabbitmq01" >> /etc/hosts'
 
 # Install isocket's custom version of thrift
 source install_isocket-thrift.sh
