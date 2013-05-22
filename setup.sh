@@ -24,7 +24,7 @@ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
 
 # Install Git, bash completion, and hub (a GitHub tool)
-brew install git bash-completion hub thrift
+brew install git bash-completion hub thrift mongodb
 
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
@@ -44,6 +44,9 @@ rvm reinstall all --force
 
 # Install RubyGems
 source install_rubygems.sh
+
+# Install Node Version Manager
+source install_nvm.sh
 
 # Set global configs for git
 source git_config.sh
