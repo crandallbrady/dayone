@@ -64,6 +64,9 @@ source install_pear.sh
 # Install isocket's custom version of thrift
 source install_isocket-thrift.sh
 
+# Add maven jvm options to .bash_profile to prevent running out of heapspace
+echo export MAVEN_OPTS=\"-Xmx512m -XX:MaxPermSize=128m\" >> ~/.bash_profile
+
 # Install dotfiles (optional)
 echo "Install dotfiles by maxbeatty? (y/n)"
 read REPLY
