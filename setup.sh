@@ -29,7 +29,7 @@ sudo sh -c 'echo "/usr/local/bin\n/usr/local/sbin\n$(cat /etc/paths)" > /etc/pat
 brew doctor
 
 # Install Git, bash completion, and hub (a GitHub tool)
-brew install git bash-completion hub
+brew install git bash-completion hub mongodb
 
 # replace LLVM gcc for rvm
 brew tap homebrew/dupes
@@ -51,6 +51,9 @@ rvm reinstall all --force
 
 # Install RubyGems
 source install_rubygems.sh
+
+# Install Node Version Manager
+source install_nvm.sh
 
 # Set global configs for git
 source git_config.sh
